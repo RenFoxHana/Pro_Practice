@@ -1,0 +1,38 @@
+﻿<Page x:Class="Pro_Practice.InvoicePages.Invoice"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Pro_Practice.InvoicePages"
+      mc:Ignorable="d" 
+      d:DesignHeight="900" d:DesignWidth="1920"
+      Title="Invoice">
+
+    <Grid Background="White">
+        <Menu>
+            <Button x:Name="AddButton" Content="ДОБАВИТЬ" Style="{StaticResource ButtonWorkMenu}" Margin="40,10,0,0" Click="AddButton_Click"/>
+        </Menu>
+
+        <ListView ItemsSource="{Binding InvoicesList}" Margin="30,60,38,30" FontSize="20" x:Name="InvoiceListView">
+            <ListView.View>
+                <GridView>
+                    <GridView.Columns>
+                        <GridViewColumn Header="Дата" DisplayMemberBinding="{Binding Period}" />
+                        <GridViewColumn Header="Объем груза" DisplayMemberBinding="{Binding VolumeCargo}" />
+                        <GridViewColumn Header="Вес груза" DisplayMemberBinding="{Binding WeightCargo}" />
+                        <GridViewColumn Header="Количество мест" DisplayMemberBinding="{Binding NumberOfSeats}" />
+                        <GridViewColumn Header="Имя отправителя" DisplayMemberBinding="{Binding SenderName}" />
+                        <GridViewColumn Header="Адрес отправителя" DisplayMemberBinding="{Binding SenderAddress}" />
+                        <GridViewColumn Header="Имя получателя" DisplayMemberBinding="{Binding RecipientName}" />
+                        <GridViewColumn Header="Адрес получателя" DisplayMemberBinding="{Binding RecipientAddress}" />
+                        <GridViewColumn Header="Название типа груза" DisplayMemberBinding="{Binding TypeCargoName}" />
+                        <GridViewColumn Header="Подразделение отправителя" DisplayMemberBinding="{Binding DivisionSender}" />
+                        <GridViewColumn Header="Склад отправителя" DisplayMemberBinding="{Binding WarehouseSender}" />
+                        <GridViewColumn Header="Подразделение получателя" DisplayMemberBinding="{Binding DivisionRecipient}" />
+                        <GridViewColumn Header="Сотрудник на приемке" DisplayMemberBinding="{Binding EmployeeAtAcceptance}" />
+                    </GridView.Columns>
+                </GridView>
+            </ListView.View>
+        </ListView>
+    </Grid>
+</Page>

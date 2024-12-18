@@ -1,0 +1,30 @@
+﻿<Page x:Class="Pro_Practice.DivisionPages.Cars"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Pro_Practice.DivisionPages"
+      mc:Ignorable="d" 
+      d:DesignHeight="900" d:DesignWidth="1920"
+      Title="Cars">
+
+    <Grid Background="White">
+        <Menu>
+            <Button x:Name="AddButton" Content="ДОБАВИТЬ" Style="{StaticResource ButtonWorkMenu}" Margin="40,10,0,0" Click="AddButton_Click"/>
+            <Button x:Name="EditButton" Content="ИЗМЕНИТЬ" Style="{StaticResource ButtonWorkMenu}" Margin="40,10,0,0" Click="EditButton_Click"/>
+        </Menu>
+
+        <ListView Margin="30,60,38,30" FontSize="20" x:Name="ListViewCar" ItemsSource="{Binding ListCar}">
+            <ListView.View>
+                <GridView>
+                    <GridView.Columns>
+                        <GridViewColumn Header="Название" DisplayMemberBinding="{Binding NameCar}"/>
+                        <GridViewColumn Header="Госномер" DisplayMemberBinding="{Binding LicensePlateNumber}"/>
+                        <GridViewColumn Header="Марка" DisplayMemberBinding="{Binding CarBrand}"/>
+                        <GridViewColumn Header="Водитель" DisplayMemberBinding="{Binding Employee}"/>
+                    </GridView.Columns>
+                </GridView>
+            </ListView.View>
+        </ListView>
+    </Grid>
+</Page>

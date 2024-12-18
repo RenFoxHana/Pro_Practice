@@ -1,0 +1,19 @@
+﻿<Window x:Class="Pro_Practice.DivisionWindow.WorkWarehouse"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Pro_Practice.DivisionWindow"
+        mc:Ignorable="d"
+        Title="WorkWarehouse" Height="450" Width="800">
+    <Grid>
+        <TextBox x:Name="WarehouseNameTextBox" Width="400" Height="40" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,72,30,0" FontSize="30"/>
+        <ComboBox x:Name="DivisionComboBox" Width="400" Height="40" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,172,30,0" FontSize="30"/>
+        <ComboBox x:Name="StorageCellComboBox" Width="400" Height="40" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,272,30,0" FontSize="30"/>
+        <Button Content="СОХРАНИТЬ" HorizontalAlignment="Center"  VerticalAlignment="Bottom" FontSize="23" Padding="3" Margin="0,0,300,30" Click="SaveButton_Click" Style="{StaticResource ButtonWorkMenu}"/>
+        <Button Content="ОТМЕНИТЬ" HorizontalAlignment="Center"  VerticalAlignment="Bottom" FontSize="23" Padding="3" Margin="300,0,0,30" Click="CancelButton_Click" Style="{StaticResource ButtonWorkMenu}"/>
+        <TextBlock HorizontalAlignment="Left" Margin="127,72,0,0" TextWrapping="Wrap" Text="Наименование:" VerticalAlignment="Top" FontSize="30"/>
+        <TextBlock HorizontalAlignment="Left" Margin="119,172,0,0" TextWrapping="Wrap" Text="Подразделение:" VerticalAlignment="Top" FontSize="30"/>
+        <TextBlock HorizontalAlignment="Left" Margin="25,272,0,0" TextWrapping="Wrap" Text="Ячейка по умолчанию:" VerticalAlignment="Top" FontSize="30"/>
+    </Grid>
+</Window>

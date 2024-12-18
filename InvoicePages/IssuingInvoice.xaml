@@ -1,0 +1,34 @@
+﻿<Page x:Class="Pro_Practice.InvoicePages.IssuingInvoice"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Pro_Practice.InvoicePages"
+      mc:Ignorable="d" 
+      d:DesignHeight="900" d:DesignWidth="1920"
+      Title="IssuingInvoice">
+
+    <Grid Background="White">
+        <Menu>
+            <Button x:Name="AddButton" Content="ДОБАВИТЬ" Style="{StaticResource ButtonWorkMenu}" Margin="40,10,0,0" Click="AddButton_Click"/>
+            <Button Content="ИЗМЕНИТЬ" Style="{StaticResource ButtonWorkMenu}" Margin="40,10,0,0" Visibility="Hidden"/>
+            <Button Content="УДАЛИТЬ" Style="{StaticResource ButtonWorkMenu}" Margin="40,10,0,0" Visibility="Hidden"/>
+        </Menu>
+
+        <ListView Margin="30,60,38,30" FontSize="20" ItemsSource="{Binding InvoicesIssue}">
+            <ListView.View>
+                <GridView>
+                    <GridView.Columns>
+                        <GridViewColumn Header="Дата" DisplayMemberBinding="{Binding Period}"/>
+                        <GridViewColumn Header="Подразделение" DisplayMemberBinding="{Binding Division}"/>
+                        <GridViewColumn Header="Склад" DisplayMemberBinding="{Binding Warehouse}"/>
+                        <GridViewColumn Header="Сотрудник на выдаче" DisplayMemberBinding="{Binding EmployeeOnIssue}"/>
+                        <GridViewColumn Header="Контрагент-получатель" DisplayMemberBinding="{Binding CounterpartieRecivier}"/>
+                        <GridViewColumn Header="Накладная" DisplayMemberBinding="{Binding Invoice}"/>
+                        <GridViewColumn Header="Количество мест" DisplayMemberBinding="{Binding NumberOfSeats}"/>
+                    </GridView.Columns>
+                </GridView>
+            </ListView.View>
+        </ListView>
+    </Grid>
+</Page>

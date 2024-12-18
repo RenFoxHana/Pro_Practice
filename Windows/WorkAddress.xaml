@@ -1,0 +1,37 @@
+﻿<Window x:Class="Pro_Practice.Windows.WorkAddress"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Pro_Practice.Windows"
+        mc:Ignorable="d"
+        Title="WorkAddress" Height="1020" Width="800">
+    <Grid>
+        <ComboBox Width="400" Height="40" Name="comboBoxCounterparty" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,32,30,0" FontSize="30"/>
+        <ComboBox Width="400" Height="40" Name="comboBoxDivision" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,107,30,0" FontSize="30"/>
+        <ComboBox Width="400" Height="40" Name="comboBoxWarehouse" Margin="0,182,30,0" HorizontalAlignment="Right" VerticalAlignment="Top" FontSize="30"/>
+        <TextBox Width="400" Height="40"  Name="latitudeTextBox" Margin="0,257,30,0" HorizontalAlignment="Right" VerticalAlignment="Top" FontSize="30"/>
+        <TextBox Width="400" Height="40"  Name="longitudeTextBox" Margin="0,332,30,0" HorizontalAlignment="Right" VerticalAlignment="Top" FontSize="30"/>
+        <TextBox Width="400" Height="40"  Name="regionTextBox" Margin="0,407,30,0" HorizontalAlignment="Right" VerticalAlignment="Top" FontSize="30"/>
+        <TextBox Width="400" Height="40"  Name="districtTextBox" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,481,30,0" FontSize="30"/>
+        <TextBox Width="400" Height="40"  Name="cityTextBox" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,557,30,0" FontSize="30"/>
+        <TextBox Width="400" Height="40"  Name="localityTextBox" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,632,30,0" FontSize="30"/>
+        <TextBox Width="400" Height="40"  Name="streetTextBox" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,707,30,0" FontSize="30"/>
+        <TextBox Width="400" Height="40"  Name="houseOrLandPlotTextBox" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,782,30,0" FontSize="30"/>
+        <TextBox Width="400" Height="40"  Name="roomTextBox" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,857,30,0" FontSize="30"/>
+        <TextBlock x:Name="CounterpartieText" Text="Контрагент:" FontSize="30" Width="170" Height="40" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="177,32,0,0" />
+        <TextBlock x:Name="DivisionText" Text="Подразделение:" FontSize="30" Width="230" Height="40" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,107,453,0"/>
+        <TextBlock x:Name="WarehouseText" Text="Склад:" FontSize="30" Width="90" Height="40" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,182,453,0"/>
+        <TextBlock x:Name="LatitudeText" Text="Широта:" FontSize="30" Width="120" Height="40" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,257,453,0"/>
+        <TextBlock x:Name="LongtitudeText" Text="Долгота:" FontSize="30" Width="120" Height="40" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,332,453,0"/>
+        <TextBlock x:Name="RegionText" Text="Регион:" FontSize="30" Width="110" Height="40" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,407,453,0"/>
+        <TextBlock x:Name="DistrictText" Text="Район:" FontSize="30" Width="90" Height="40" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,481,453,0"/>
+        <TextBlock x:Name="CityText" Text="Город:" FontSize="30" Width="90" Height="40" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,557,453,0"/>
+        <TextBlock x:Name="LocalityText" Text="Населенный пункт:" FontSize="30" Width="270" Height="40" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,632,453,0"/>
+        <TextBlock x:Name="StreetText" Text="Улица:" FontSize="30" Width="90" Height="40" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,707,453,0"/>
+        <TextBlock x:Name="HousePlotText" Text="Дом/Зем. участок:" FontSize="30" Width="250"  Height="40" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,782,453,0"/>
+        <TextBlock x:Name="RoomText" Text="Помещение:" FontSize="30" Width="180" Height="40" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,857,453,0"/>
+        <Button Content="СОХРАНИТЬ" HorizontalAlignment="Center" VerticalAlignment="Bottom" FontSize="23" Padding="3" Click="SaveButton_Click" Margin="0,0,300,20" Style="{StaticResource ButtonWorkMenu}"/>
+        <Button Content="ОТМЕНИТЬ" HorizontalAlignment="Center" VerticalAlignment="Bottom" FontSize="23" Padding="3" Click="CancelButton_Click" Margin="300,0,0,20" Style="{StaticResource ButtonWorkMenu}"/>
+    </Grid>
+</Window>

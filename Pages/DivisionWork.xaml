@@ -1,0 +1,23 @@
+﻿<Page x:Class="Pro_Practice.Pages.DivisionWork"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Pro_Practice.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="980" d:DesignWidth="1920"
+      Title="DivisionWork">
+
+    <Grid>
+        <Menu Background="#FFF1DEC5">
+            <Button Content="Автомашины" Style="{StaticResource ButtonTopMenu}" Click="ButtonCar_Click"/>
+            <Button Content="Адрес" Style="{StaticResource ButtonTopMenu}" Click="ButtonAdress_Click"/>
+            <Button Content="Марки автомашин" Style="{StaticResource ButtonTopMenu}" Click="ButtonCarBrands_Click"/>
+            <Button Content="Подразделение" Style="{StaticResource ButtonTopMenu}" Click="ButtonDivision_Click"/>
+            <Button Content="Склады" Style="{StaticResource ButtonTopMenu}" Click="ButtonWarehouse_Click"/>
+            <Button Content="Сотрудники" Style="{StaticResource ButtonTopMenu}" Click="ButtonEmployees_Click"/>
+            <Button Content="Ячейки склада" Style="{StaticResource ButtonTopMenu}" Click="ButtonStorageCells_Click"/>
+        </Menu>
+        <Frame Height="900" Name="MainFrame" VerticalAlignment="Bottom"/>
+    </Grid>
+</Page>

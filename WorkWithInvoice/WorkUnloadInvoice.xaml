@@ -1,0 +1,68 @@
+﻿<Window x:Class="Pro_Practice.WorkWithInvoice.WorkUnloadInvoice"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Pro_Practice.WorkWithInvoice" xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+        mc:Ignorable="d" 
+      d:DesignHeight="900" d:DesignWidth="1920"
+      Title="WorkUnloadInvoice">
+
+    <Grid Background="White">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0" Margin="10">
+
+            <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                <Button Content="Сохранить" Width="100" Margin="5" Click="SaveButton_Click"/>
+                <Button Content="Отмена" Width="100" Margin="5" Click="CancelButton_Click"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Vertical" Margin="0,5">
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Дата: " VerticalAlignment="Center"/>
+                    <xctk:DateTimePicker Margin="120,5,5,5" Width="200" x:Name="DateTimePicker"/>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Подразделение: " VerticalAlignment="Center"/>
+                    <ComboBox Margin="60,5,5,5" Width="200" x:Name="DivisionComboBox" SelectionChanged="WarehouseEmployeeComboBox_SelectionChanged"/>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Склад: " VerticalAlignment="Center"/>
+                    <ComboBox Margin="115,5,5,5" Width="200" x:Name="WarehouseComboBox"/>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Сотрудник на выгрузке: " VerticalAlignment="Center"/>
+                    <ComboBox Margin="19,5,5,5" Width="200" x:Name="EmployeeComboBox"/>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Автомашина: " VerticalAlignment="Center"/>
+                    <ComboBox Margin="78,5,5,5" Width="200" x:Name="CarComboBox"/>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Документ-основание: " VerticalAlignment="Center"/>
+                    <ComboBox Margin="30,5,5,5" Width="200" x:Name="DocumentComboBox" SelectionChanged="InvoiceComboBox_SelectionChanged"/>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Накладная: " VerticalAlignment="Center"/>
+                    <ComboBox Margin="88,5,5,5" Width="200" x:Name="InvoiceComboBox"/>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Количество мест: " VerticalAlignment="Center"/>
+                    <TextBox Margin="53,5,5,5" Width="200" x:Name="NumberOfSeatsTextBox"/>
+                </StackPanel>
+
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>

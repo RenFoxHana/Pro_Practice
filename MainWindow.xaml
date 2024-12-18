@@ -1,0 +1,18 @@
+﻿<Window x:Class="Pro_Practice.MainWindow" ResizeMode="NoResize" WindowState="Maximized" WindowStyle="None"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Pro_Practice"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="auto" Width="auto">
+    <Grid>
+        <Menu Width="1920" Height="100" VerticalAlignment="Top" Background="#FFF1D0A7" >
+            <Button x:Name="ButtonDivision" Content="Работа с подразделениями" Margin="80,15,0,0" Click="ButtonDivision_Click" Style="{StaticResource ButtonMainMenu}"/>
+            <Button x:Name="ButtonCounterpartie" Content="Работа с контрагентами" Margin="30,15,0,0" Click="ButtonCounterpartie_Click" Style="{StaticResource ButtonMainMenu}"/>
+            <Button x:Name="ButtonInvoice" Content="Работа с накладными" Margin="30,15,0,0" Click="ButtonInvoice_Click" Style="{StaticResource ButtonMainMenu}"/>
+            <Button x:Name="ButtonExit" Background="#FFE6BD8A" Content="ВЫХОД" Width="205" Height="60" Margin="100,15,0,0" Click="ButtonExit_Click" FontSize="32"/>
+        </Menu>
+        <Frame Width="1920" Height="980" Name="MainFrame" Background="White" NavigationUIVisibility="Hidden" VerticalAlignment="Bottom" Margin="0,100,0,0"/>
+    </Grid>
+</Window>
