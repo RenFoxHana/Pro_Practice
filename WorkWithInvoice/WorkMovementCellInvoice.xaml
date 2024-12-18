@@ -34,7 +34,7 @@
 
                 <StackPanel Orientation="Horizontal">
                     <TextBlock Text="Склад: " VerticalAlignment="Center" Width="150"/>
-                    <ComboBox Margin="5" Width="200" x:Name="WarehouseComboBox"/>
+                    <ComboBox Margin="5" Width="200" x:Name="WarehouseComboBox" SelectionChanged="CellComboBox_SelectionChanged"/>
                 </StackPanel>
 
                 <StackPanel Orientation="Horizontal">

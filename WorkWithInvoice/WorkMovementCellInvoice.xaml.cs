@@ -170,5 +170,27 @@ namespace Pro_Practice.WorkWithInvoice
                 warehouseComboBox.ItemsSource = null;
             }
         }
+
+        private void CellComboBox_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
+        {
+            var selectedWarehouse = (Warehouse)WarehouseComboBox.SelectedItem;
+            LoadCellForWarehouse(selectedWarehouse, CellFromComboBox);
+            LoadCellForWarehouse(selectedWarehouse, CellToComboBox);
+        }
+        private void LoadCellForWarehouse(Warehouse warehouse, System.Windows.Controls.ComboBox storageComboBox)
+        {
+            if (warehouse != null)
+            {
+                storageComboBox.ItemsSource = _context.StorageCells
+                    .Where(a => a.IdStorageCell == warehouse.DefaultCell)
+                    .Select(a => new StorageCellVM(a))
+                    .ToList();
+                storageComboBox.DisplayMemberPath = "NameCell";
+            }
+            else
+            {
+                storageComboBox.ItemsSource = null;
+            }
+        }
     }
 }

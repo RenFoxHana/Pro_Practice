@@ -70,8 +70,7 @@ namespace Pro_Practice.CounterpartieWindow
                         return false;
                     }
 
-                    // Проверка формата паспортных данных
-                    if (!Regex.IsMatch(PassportTextBox.Text, @"^\d{2} \d{2} \d{6}\$"))
+                    if (!Regex.IsMatch(PassportTextBox.Text, @"^\d{2} \d{2} \d{6}$"))
                     {
                         MessageBox.Show("Поле 'Паспортные данные' должно быть в формате XX XX XXXXXX.", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Warning);
                         return false;
@@ -86,8 +85,7 @@ namespace Pro_Practice.CounterpartieWindow
                         return false;
                     }
 
-                    // Проверка формата ИНН
-                    if (!Regex.IsMatch(TaxIdTextBox.Text, @"^\d{10}\$"))
+                    if (!Regex.IsMatch(TaxIdTextBox.Text, @"^\d{10}$"))
                     {
                         MessageBox.Show("Поле 'ИНН' должно содержать 10 цифр.", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Warning);
                         return false;
